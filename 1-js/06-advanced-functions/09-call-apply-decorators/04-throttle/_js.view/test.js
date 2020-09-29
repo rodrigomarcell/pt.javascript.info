@@ -7,8 +7,8 @@ describe("throttle(f, 1000)", function() {
   }
 
   before(function() {
-    this.clock = sinon.useFakeTimers();
     f1000 = throttle(f, 1000);
+    this.clock = sinon.useFakeTimers();
   });
 
   it("the first call runs now", function() {
@@ -42,22 +42,6 @@ describe("throttle(f, 1000)", function() {
 
   after(function() {
     this.clock.restore();
-  });
-
-});
-
-describe('throttle', () => {
-
-  it('runs a forwarded call once', done => {
-    let log = '';
-    const f = str => log += str;
-    const f10 = throttle(f, 10);
-    f10('once');
-
-    setTimeout(() => {
-      assert.equal(log, 'once');
-      done();
-    }, 20);
   });
 
 });

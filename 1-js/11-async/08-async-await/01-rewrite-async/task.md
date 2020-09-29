@@ -1,7 +1,7 @@
 
 # Rewrite using async/await
 
-Rewrite this example code from the chapter <info:promise-chaining> using `async/await` instead of `.then/catch`:
+Rewrite the one of examples from the chapter <info:promise-chaining> using `async/await` instead of `.then/catch`:
 
 ```js run
 function loadJson(url) {
@@ -15,6 +15,6 @@ function loadJson(url) {
     })
 }
 
-loadJson('no-such-user.json')
+loadJson('no-such-user.json') // (3)
   .catch(alert); // Error: 404
 ```

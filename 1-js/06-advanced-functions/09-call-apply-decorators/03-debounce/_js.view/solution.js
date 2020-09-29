@@ -1,7 +1,15 @@
-function debounce(func, ms) {
-  let timeout;
+function debounce(f, ms) {
+
+  let isCooldown = false;
+
   return function() {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func.apply(this, arguments), ms);
+    if (isCooldown) return;
+
+    f.apply(this, arguments);
+
+    isCooldown = true;
+
+    setTimeout(() => isCooldown = false, ms);
   };
+
 }

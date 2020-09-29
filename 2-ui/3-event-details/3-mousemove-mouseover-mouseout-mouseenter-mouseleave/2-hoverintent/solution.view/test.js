@@ -49,18 +49,18 @@ describe("hoverIntent", function() {
     }
   })
 
-  it("mouseover -> when the pointer just arrived, no tooltip", function() {
+  it("mouseover -> immediately no tooltip", function() {
     mouse('mouseover', 10, 10);
     assert.isFalse(isOver);
   });
 
-  it("mouseover -> after a delay, the tooltip shows up", function() {
+  it("mouseover -> pause shows tooltip", function() {
     mouse('mouseover', 10, 10);
     this.clock.tick(100);
     assert.isTrue(isOver);
   });
 
-  it("mouseover -> followed by fast mouseout leads doesn't show tooltip", function() {
+  it("mouseover -> fast mouseout no tooltip", function() {
     mouse('mouseover', 10, 10);
     setTimeout(
       () => mouse('mouseout', 300, 300, { relatedTarget: document.body}),

@@ -4,7 +4,7 @@ importance: 5
 
 # DOM children
 
-Look at this page:
+For the page:
 
 ```html
 <html>
@@ -18,7 +18,7 @@ Look at this page:
 </html>
 ```
 
-For each of the following, give at least one way of how to access them:
+How to access:
 - The `<div>` DOM node?
 - The `<ul>` DOM node?
 - The second `<li>` (with Pete)?

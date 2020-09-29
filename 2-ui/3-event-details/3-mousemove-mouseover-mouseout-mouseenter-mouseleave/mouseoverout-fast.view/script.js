@@ -1,4 +1,3 @@
-let parent = document.getElementById('parent');
 parent.onmouseover = parent.onmouseout = parent.onmousemove = handler;
 
 function handler(event) {

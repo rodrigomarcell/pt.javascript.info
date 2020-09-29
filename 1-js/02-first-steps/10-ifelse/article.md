@@ -1,4 +1,4 @@
-# Conditional branching: if, '?'
+# Conditional operators: if, '?'
 
 Sometimes, we need to perform different actions based on different conditions.
 

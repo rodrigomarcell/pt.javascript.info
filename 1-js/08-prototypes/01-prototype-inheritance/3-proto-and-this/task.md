@@ -2,7 +2,7 @@ importance: 5
 
 ---
 
-# Where does it write?
+# Where it writes?
 
 We have `rabbit` inheriting from `animal`.
 
